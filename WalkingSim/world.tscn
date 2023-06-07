@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://h386apgeindf"]
+
+[ext_resource type="PackedScene" uid="uid://ctca8lyffheka" path="res://level_test.tscn" id="1_yqxas"]
+[ext_resource type="PackedScene" uid="uid://daju8scpvco50" path="res://player.tscn" id="2_ate4x"]
+[ext_resource type="PackedScene" uid="uid://j1gmu5u00jme" path="res://pickup.tscn" id="3_t4e37"]
+
+[sub_resource type="Environment" id="Environment_3f13a"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_xiayo"]
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3f13a")
+camera_attributes = SubResource("CameraAttributesPractical_xiayo")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="LevelTest" parent="." instance=ExtResource("1_yqxas")]
+
+[node name="Player" parent="." instance=ExtResource("2_ate4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92752, 0)
+
+[node name="Pickup" parent="." instance=ExtResource("3_t4e37")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.92337, 0, 2.78429)

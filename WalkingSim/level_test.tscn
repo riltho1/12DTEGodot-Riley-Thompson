@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctca8lyffheka"]
+
+[ext_resource type="PackedScene" uid="uid://b8vit7k632wmd" path="res://LevelTest.blend" id="1_qcm4y"]
+
+[node name="LevelTest" instance=ExtResource("1_qcm4y")]
+
+[node name="Cylinder" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.237252, 0)
