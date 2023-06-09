@@ -8,7 +8,8 @@ var switches_collected = 0
 
 @onready var ray = $Camera3D/RayCast3D
 @onready var interaction_notifier = $Control/InteractionNotifier
-@onready var collection_tracker = $Control/MarginContainer/CollectionTracker 
+@onready var collection_tracker = $Control/MarginContainer/CollectionTracker
+@onready var flashlight_power = $Camera3D/SpotLight3D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -34,11 +35,17 @@ func check_ray_hit():
 	else:
 		interaction_notifier.visible = false
 
-
+func flashlight_enabled():
+	if flashlight_power.light_energy > 5:
+		flashlight_power.light_energy = 0
+	else:
+		flashlight_power.light_energy = 6
+		
 
 func _physics_process(delta):
 	check_ray_hit()
-	
+	if Input.is_action_just_pressed("flashlight"):
+		flashlight_enabled()
 	#Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta

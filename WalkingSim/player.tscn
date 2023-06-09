@@ -16,7 +16,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.36471, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
-target_position = Vector3(0, 0, -1)
+target_position = Vector3(0, 0, -1.5)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
+light_energy = 5.04
+shadow_enabled = true
+spot_range = 10.0
+spot_angle = 49.0668
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -28,7 +36,7 @@ grow_vertical = 2
 mouse_filter = 2
 mouse_force_pass_scroll_events = false
 
-[node name="CollectionTracker" type="Label" parent="Control"]
+[node name="InteractionNotifier" type="Label" parent="Control"]
 layout_mode = 2
 offset_left = 495.0
 offset_top = 311.0
@@ -42,6 +50,6 @@ offset_left = 10.0
 offset_right = 172.0
 offset_bottom = 40.0
 
-[node name="InteractionNotifier" type="Label" parent="Control/MarginContainer"]
+[node name="CollectionTracker" type="Label" parent="Control/MarginContainer"]
 layout_mode = 2
 text = "Switches 0/12"

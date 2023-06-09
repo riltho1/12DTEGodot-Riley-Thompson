@@ -4,7 +4,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g0gdj"]
 
-[node name="Pickup" type="Area3D"]
+[node name="Pickup" type="Area3D" groups=["Pickup"]]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_4pfu1")

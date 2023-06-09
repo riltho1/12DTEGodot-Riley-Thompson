@@ -1,20 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://h386apgeindf"]
+[gd_scene load_steps=7 format=3 uid="uid://h386apgeindf"]
 
 [ext_resource type="PackedScene" uid="uid://ctca8lyffheka" path="res://level_test.tscn" id="1_yqxas"]
 [ext_resource type="PackedScene" uid="uid://daju8scpvco50" path="res://player.tscn" id="2_ate4x"]
 [ext_resource type="PackedScene" uid="uid://j1gmu5u00jme" path="res://pickup.tscn" id="3_t4e37"]
 
-[sub_resource type="Environment" id="Environment_3f13a"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6hrna"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_energy_multiplier = 0.0
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_xiayo"]
+[sub_resource type="Sky" id="Sky_vnsed"]
+sky_material = SubResource("ProceduralSkyMaterial_6hrna")
+
+[sub_resource type="Environment" id="Environment_n6mis"]
+background_mode = 1
+background_energy_multiplier = 0.0
+sky = SubResource("Sky_vnsed")
+ambient_light_source = 2
+ambient_light_energy = 0.0
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_3f13a")
-camera_attributes = SubResource("CameraAttributesPractical_xiayo")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+environment = SubResource("Environment_n6mis")
 
 [node name="LevelTest" parent="." instance=ExtResource("1_yqxas")]
 
@@ -22,4 +32,4 @@ camera_attributes = SubResource("CameraAttributesPractical_xiayo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.92752, 0)
 
 [node name="Pickup" parent="." instance=ExtResource("3_t4e37")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.92337, 0, 2.78429)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.51306, 0, -4.91796)
