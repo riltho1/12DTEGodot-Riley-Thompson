@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://oskd38k60umg"]
+
+[ext_resource type="PackedScene" uid="uid://b1mtg6l0uh4fe" path="res://environment.blend" id="1_rgkkk"]
+
+[node name="Environment" type="Node3D"]
+
+[node name="environment" parent="." instance=ExtResource("1_rgkkk")]
+
+[editable path="environment"]
