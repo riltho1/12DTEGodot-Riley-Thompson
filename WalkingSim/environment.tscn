@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4ckwuvtkqwal"]
+
+[ext_resource type="PackedScene" uid="uid://b1mtg6l0uh4fe" path="res://environment.blend" id="1_wgfj0"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_v16b0"]
+data = PackedVector3Array(-1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[node name="environment" instance=ExtResource("1_wgfj0")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_v16b0")
