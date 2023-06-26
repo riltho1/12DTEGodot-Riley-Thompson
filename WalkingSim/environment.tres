@@ -1,16 +1,16 @@
-[gd_resource type="Environment" load_steps=3 format=3 uid="uid://sa4fhpwn53fr"]
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://sa4fhpwn53fr"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6hrna"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-sky_energy_multiplier = 0.0
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[ext_resource type="Texture2D" uid="uid://bvfcuj87pty42" path="res://milkywaypan_brunier_2048.jpg" id="1_3c1hv"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6wj0o"]
+panorama = ExtResource("1_3c1hv")
 
 [sub_resource type="Sky" id="Sky_vnsed"]
-sky_material = SubResource("ProceduralSkyMaterial_6hrna")
+sky_material = SubResource("PanoramaSkyMaterial_6wj0o")
 
 [resource]
-background_mode = 1
-background_energy_multiplier = 0.0
+background_mode = 2
+background_energy_multiplier = 0.88
 sky = SubResource("Sky_vnsed")
 ambient_light_source = 2
 ambient_light_energy = 0.0
