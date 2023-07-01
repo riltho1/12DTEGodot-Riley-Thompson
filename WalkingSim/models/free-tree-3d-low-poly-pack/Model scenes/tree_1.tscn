@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://m6k1mgrgr2oc"]
+
+[ext_resource type="PackedScene" uid="uid://lptxkpqv1a1e" path="res://models/textures/tree1.blend" id="1_jsbgi"]
+[ext_resource type="Texture2D" uid="uid://blvfx54licr3l" path="res://models/textures/Colorsheet Tree cold.png" id="2_yhphf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vyaj"]
+albedo_texture = ExtResource("2_yhphf")
+
+[node name="tree1" instance=ExtResource("1_jsbgi")]
+
+[node name="tree" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_1vyaj")
