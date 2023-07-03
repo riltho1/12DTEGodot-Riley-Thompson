@@ -13,6 +13,7 @@ var switches_collected = 0
 @onready var interaction_notifier = $Control/InteractionNotifier
 @onready var collection_tracker = $Control/MarginContainer/CollectionTracker
 @onready var flashlight_power = $Camera3D/SpotLight3D
+@onready var door_interaction_notifier = $Control/DoorInterationNotifier
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -37,6 +38,17 @@ func check_ray_hit():
 			collection_tracker.text = "Switches : " + str(switches_collected) + " / 12"
 	else:
 		interaction_notifier.visible = false
+		
+func door_open_and_close():
+	if ray.is_colliding():
+		if ray.get_collider().is_in_group("Door"):
+			door_interaction_notifier.visible = true
+		if Input.is_action_just_pressed("use"):
+			ray.get_collider().queue_free()
+			$AnimationPlayer.play("Door_Open")
+	else:
+		door_interaction_notifier.visible = false
+	
 
 func flashlight_enabled():
 	if flashlight_power.light_energy > 5:
@@ -47,6 +59,7 @@ func flashlight_enabled():
 
 func _physics_process(delta):
 	check_ray_hit()
+	door_open_and_close()
 	if Input.is_action_just_pressed("flashlight"):
 		flashlight_enabled()
 		
