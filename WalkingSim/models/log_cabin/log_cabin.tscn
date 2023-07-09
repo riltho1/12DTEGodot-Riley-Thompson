@@ -83,9 +83,10 @@ material_override = SubResource("StandardMaterial3D_vc6a5")
 mesh = ExtResource("4_b5rk2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="RootNode/cabin/cabin_door" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, -2.84217e-14, 0, 2.84217e-14, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/cabin/cabin_door/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 3.55271e-15, -1.42109e-14, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, -2.52435e-29, 1, 7.10543e-15, 3.55271e-15, -2.84217e-14, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_7hodt")
 
 [node name="Area3D" type="Area3D" parent="RootNode/cabin/cabin_door" index="1"]

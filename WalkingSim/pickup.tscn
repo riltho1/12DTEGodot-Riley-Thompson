@@ -2,7 +2,7 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_4pfu1"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_g0gdj"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_5h60v"]
 
 [node name="Pickup" type="Area3D" groups=["Pickup"]]
 
@@ -10,4 +10,4 @@
 mesh = SubResource("BoxMesh_4pfu1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_g0gdj")
+shape = SubResource("BoxShape3D_5h60v")
