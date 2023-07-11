@@ -1,12 +1,7 @@
 extends Node3D
-"""
-var door_state = false
 
-@onready var ray = $Camera3D/RayCast3D
+signal door_animation
 
-func _input(event):
-	
+func _process(delta):
 	if Input.is_action_just_pressed("use"):
-		ray.get_collider().queue_free()
-		$AnimationPlayer.play("Door_Open")
-"""
+		emit_signal("door_animation")

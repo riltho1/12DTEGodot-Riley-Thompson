@@ -36,17 +36,17 @@ func check_ray_hit():
 				collider.queue_free()
 				switches_collected += 1
 				collection_tracker.text = "Switches : " + str(switches_collected) + " / 12"
+				
+		elif collider and collider.is_in_group("Door"):
+			interaction_notifier.visible = true
+		if Input.is_action_just_pressed("use"):
+			collider.queue_free()
+			#$AnimationPlayer.play("Door_Open")
 	else:
 		interaction_notifier.visible = false
 		
 		
-	'''
-		if ray.get_collider().is_in_group("Door"):
-			interaction_notifier.visible = true
-		if Input.is_action_just_pressed("use"):
-			ray.get_collider().queue_free()
-			#$AnimationPlayer.play(door_open)
-		'''
+		
 func flashlight_enabled():
 	if flashlight_power.light_energy > 5:
 		flashlight_power.light_energy = 0
