@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dsftt2m0m8x70"]
+[gd_scene load_steps=15 format=3 uid="uid://dsftt2m0m8x70"]
 
 [ext_resource type="PackedScene" uid="uid://2tvcwqwys0tc" path="res://models/log_cabin/log_cabin.fbx" id="1_sjbba"]
+[ext_resource type="Script" path="res://models/log_cabin/log_cabin.gd" id="2_6wt5m"]
 [ext_resource type="Texture2D" uid="uid://6pxxs4c37h0p" path="res://models/log_cabin/log_cabin_4096px.png" id="2_sycqv"]
 [ext_resource type="Texture2D" uid="uid://bga2lvyt32bik" path="res://models/log_cabin/log_cabin_1024px.png" id="3_pi6n4"]
 [ext_resource type="ArrayMesh" uid="uid://cctxmaml4x0vj" path="res://cabin door.tres" id="4_b5rk2"]
@@ -73,6 +74,7 @@ _data = {
 }
 
 [node name="log_cabin" instance=ExtResource("1_sjbba")]
+script = ExtResource("2_6wt5m")
 
 [node name="cabin" parent="RootNode" index="0"]
 material_override = SubResource("StandardMaterial3D_ok5hs")
