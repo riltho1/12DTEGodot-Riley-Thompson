@@ -13,7 +13,7 @@
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_hp5b4")
 
-[node name="Player" parent="." instance=ExtResource("2_ate4x")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_ate4x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.52336, 5.43548)
 run_speed = 7
 walk_speed = 3
