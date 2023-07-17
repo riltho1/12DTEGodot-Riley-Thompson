@@ -3,6 +3,8 @@
 [ext_resource type="Script" path="res://player.gd" id="1_titeb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d5awb"]
+radius = 0.24
+height = 1.8
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_titeb")

@@ -29,6 +29,7 @@ func _unhandled_input(event):
 
 func check_ray_hit():
 	if ray.is_colliding():
+	
 		var collider = ray.get_collider() #This checks the collider to ensure it is not null before being called
 		if collider and collider.is_in_group("Pickup"):
 			interaction_notifier.visible = true
@@ -40,7 +41,10 @@ func check_ray_hit():
 		elif collider and collider.is_in_group("Door"):
 			interaction_notifier.visible = true
 		if Input.is_action_just_pressed("use"):
-			collider.queue_free()
+			if collider.is_in_group("Door"):
+				collider.get_parent().get_parent().get_parent().get_parent().interact_door()
+			elif collider.is_in_group("Pickup"):
+				collider.queue_free()
 			#$AnimationPlayer.play("Door_Open")
 	else:
 		interaction_notifier.visible = false
