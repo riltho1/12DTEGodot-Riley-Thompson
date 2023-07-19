@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://daju8scpvco50"]
+[gd_scene load_steps=4 format=3 uid="uid://daju8scpvco50"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_titeb"]
+[ext_resource type="PackedScene" uid="uid://dqd2byysjmktq" path="res://flash_light.tscn" id="2_oarey"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d5awb"]
 radius = 0.24
@@ -64,3 +65,6 @@ offset_bottom = 40.0
 [node name="CollectionTracker" type="Label" parent="Control/MarginContainer"]
 layout_mode = 2
 text = "Switches 0/12"
+
+[node name="flashLight" parent="." instance=ExtResource("2_oarey")]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0.461, 1.2, -0.439)

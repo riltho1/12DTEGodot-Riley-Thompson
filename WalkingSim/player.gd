@@ -45,7 +45,6 @@ func check_ray_hit():
 				collider.get_parent().get_parent().get_parent().get_parent().interact_door()
 			elif collider.is_in_group("Pickup"):
 				collider.queue_free()
-			#$AnimationPlayer.play("Door_Open")
 	else:
 		interaction_notifier.visible = false
 		
