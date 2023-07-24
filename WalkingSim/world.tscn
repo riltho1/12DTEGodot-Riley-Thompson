@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://h386apgeindf"]
+[gd_scene load_steps=6 format=3 uid="uid://h386apgeindf"]
 
 [ext_resource type="PackedScene" uid="uid://ctnrxe7l0uxg0" path="res://environment.tscn" id="1_1aayt"]
 [ext_resource type="PackedScene" uid="uid://daju8scpvco50" path="res://player.tscn" id="2_ate4x"]
 [ext_resource type="Environment" uid="uid://sa4fhpwn53fr" path="res://environment.tres" id="2_hp5b4"]
 [ext_resource type="PackedScene" uid="uid://j1gmu5u00jme" path="res://pickup.tscn" id="3_t4e37"]
 [ext_resource type="PackedScene" uid="uid://dsftt2m0m8x70" path="res://models/log_cabin/log_cabin.tscn" id="5_2quxx"]
-[ext_resource type="PackedScene" uid="uid://db0yhlt8yeym7" path="res://enemy.tscn" id="6_rgqgh"]
 
 [node name="World" type="Node3D"]
 
@@ -24,6 +23,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.51306, 2.78199, -4.91796)
 
 [node name="log_cabin" parent="." instance=ExtResource("5_2quxx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2053, 0)
-
-[node name="predator" parent="." instance=ExtResource("6_rgqgh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28275, 1.64174, 6.45127)
