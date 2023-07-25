@@ -1,0 +1,125 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4mvx6kmdv7do"]
+
+[ext_resource type="PackedScene" uid="uid://bf6hvdlah6pob" path="res://models/predator.blend" id="1_rmsl6"]
+
+[sub_resource type="Animation" id="Animation_utu7h"]
+resource_name = "Walking"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HorrorMovieCharacter_004_182_L_Foot_2_Predator:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1.5708, 0, 0), Vector3(1.39626, 0, 0), Vector3(1.5708, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HorrorMovieCharacter_004_180_R_Foot_1_Predator:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1.5708, 0, 0), Vector3(1.74533, 0, 0), Vector3(1.5708, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HorrorMovieCharacter_004_182_L_Foot_2_Predator:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.111, 0.486, -0.079), Vector3(0.111, 0.486, 0.00957822), Vector3(0.111, 0.486, -0.079)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HorrorMovieCharacter_004_180_R_Foot_1_Predator:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.125352, 0.485632, -0.0785377), Vector3(-0.125352, 0.485632, -0.0785377), Vector3(-0.125352, 0.485632, -0.0785377)]
+}
+
+[sub_resource type="Animation" id="Animation_qhfak"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HorrorMovieCharacter_004_182_L_Foot_2_Predator:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5708, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HorrorMovieCharacter_004_180_R_Foot_1_Predator:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5708, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HorrorMovieCharacter_004_182_L_Foot_2_Predator:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.111, 0.486, -0.079)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HorrorMovieCharacter_004_180_R_Foot_1_Predator:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.125352, 0.485632, -0.0785377)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jfb4l"]
+_data = {
+"RESET": SubResource("Animation_qhfak"),
+"Walking": SubResource("Animation_utu7h")
+}
+
+[node name="predator" instance=ExtResource("1_rmsl6")]
+
+[node name="HorrorMovieCharacter_004_180_R_Foot_1_Predator" parent="." index="5"]
+transform = Transform3D(3.02586, 0, 0, 0, -1.32264e-07, -3.02585, 0, 3.02585, -1.32264e-07, -0.125352, 0.485632, -0.0785377)
+
+[node name="HorrorMovieCharacter_004_182_L_Foot_2_Predator" parent="." index="6"]
+transform = Transform3D(3.02586, 0, 0, 0, -1.32264e-07, -3.02585, 0, 3.02585, -1.32264e-07, 0.111, 0.486, -0.079)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="8"]
+libraries = {
+"": SubResource("AnimationLibrary_jfb4l")
+}

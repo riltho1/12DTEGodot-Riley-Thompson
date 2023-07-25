@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://db0yhlt8yeym7"]
-
-[ext_resource type="PackedScene" uid="uid://bf6hvdlah6pob" path="res://models/predator.blend" id="1_jkam6"]
-
-[node name="predator" instance=ExtResource("1_jkam6")]
