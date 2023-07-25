@@ -29,7 +29,6 @@ func _unhandled_input(event):
 
 func check_ray_hit():
 	if ray.is_colliding():
-	
 		var collider = ray.get_collider() #This checks the collider to ensure it is not null before being called
 		if collider and collider.is_in_group("Pickup"):
 			interaction_notifier.visible = true
