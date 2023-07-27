@@ -1,6 +1,60 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0babheowury5"]
+[gd_scene load_steps=8 format=3 uid="uid://d0babheowury5"]
 
 [ext_resource type="Script" path="res://MainMenu.gd" id="1_ng2ak"]
+[ext_resource type="Texture2D" uid="uid://ttk74qb7oire" path="res://luke-guinan-tree-assets-forest.jpg" id="2_tuxc3"]
+[ext_resource type="FontFile" uid="uid://bdn3a2mkaixfs" path="res://Squarely.ttf" id="2_xtyvk"]
+
+[sub_resource type="Animation" id="Animation_7tb1a"]
+resource_name = "MainToOptions"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(575, 325), Vector2(1727, 325)]
+}
+
+[sub_resource type="Animation" id="Animation_mbow8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(575, 325)]
+}
+
+[sub_resource type="Animation" id="Animation_4p0tv"]
+resource_name = "OptionsToMain"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1727, 325), Vector2(575, 325)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0qn25"]
+_data = {
+"MainToOptions": SubResource("Animation_7tb1a"),
+"OptionsToMain": SubResource("Animation_4p0tv"),
+"RESET": SubResource("Animation_mbow8")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,7 +64,7 @@ offset_bottom = 648.0
 script = ExtResource("1_ng2ak")
 metadata/_edit_vertical_guides_ = []
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MainMenu" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -25,85 +79,139 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_group_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="MainMenu"]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/CenterContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer"]
-layout_mode = 2
-text = "Dark Pathways"
+[node name="Sprite2D" type="Sprite2D" parent="MainMenu/CenterContainer/HBoxContainer"]
+position = Vector2(132.5, 59)
+scale = Vector2(1.44, 1.07667)
+texture = ExtResource("2_tuxc3")
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/HBoxContainer"]
+[node name="Sprite2D2" type="Sprite2D" parent="MainMenu/CenterContainer/HBoxContainer"]
+position = Vector2(1284.5, 59)
+scale = Vector2(1.44, 1.07667)
+texture = ExtResource("2_tuxc3")
+
+[node name="Label" type="Label" parent="MainMenu/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_xtyvk")
+theme_override_font_sizes/font_size = 50
+text = "    DARK
+PATHWAYS"
+
+[node name="CenterContainer" type="CenterContainer" parent="MainMenu/CenterContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/HBoxContainer/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/CenterContainer/HBoxContainer/CenterContainer"]
 layout_mode = 2
 
-[node name="Start" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Start" type="Button" parent="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_xtyvk")
+theme_override_font_sizes/font_size = 26
 text = "START"
 flat = true
 
-[node name="Option" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Options" type="Button" parent="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_xtyvk")
+theme_override_font_sizes/font_size = 26
 text = "OPTIONS"
 flat = true
 
-[node name="Quit" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_xtyvk")
+theme_override_font_sizes/font_size = 26
 text = "QUIT"
 flat = true
 
-[node name="MarginContainer2" type="MarginContainer" parent="."]
+[node name="OptionsMenu" type="MarginContainer" parent="."]
 layout_mode = 1
-offset_right = 40.0
-offset_bottom = 90.0
+offset_left = 1536.0
+offset_top = 248.0
+offset_right = 1859.0
+offset_bottom = 397.0
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer2"]
+[node name="CenterContainer" type="CenterContainer" parent="OptionsMenu"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu/CenterContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/CenterContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionsMenu/CenterContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_xtyvk")
+theme_override_font_sizes/font_size = 26
+text = "SFX"
+
+[node name="SoundSlider" type="HSlider" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="SoundSlider" type="HSlider" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer/Label"]
-layout_mode = 2
-offset_top = 27.0
-offset_right = 8.0
-offset_bottom = 43.0
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer2/CenterContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="OptionsMenu/CenterContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_xtyvk")
+theme_override_font_sizes/font_size = 26
+text = "MUSIC"
+
+[node name="HSlider" type="HSlider" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="HSlider" type="HSlider" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer2"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="OptionsMenu/CenterContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer2/CenterContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_xtyvk")
+theme_override_font_sizes/font_size = 26
+text = "FULLSCREEN"
+
+[node name="CheckBox" type="CheckBox" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer3"]
+[node name="Back" type="Button" parent="OptionsMenu/CenterContainer/VBoxContainer"]
 layout_mode = 2
-
-[node name="CheckBox" type="CheckBox" parent="MarginContainer2/CenterContainer/VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="MarginContainer2/CenterContainer/VBoxContainer"]
-layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_xtyvk")
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+flat = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0qn25")
+}
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(575, 325)
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[connection signal="pressed" from="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Options" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="toggled" from="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer3/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="OptionsMenu/CenterContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

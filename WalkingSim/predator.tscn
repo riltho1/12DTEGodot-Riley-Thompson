@@ -211,10 +211,10 @@ _data = {
 [node name="predator" instance=ExtResource("1_rmsl6")]
 
 [node name="HorrorMovieCharacter_004_173_L_Hand_2_Predator" parent="." index="0"]
-transform = Transform3D(-3.6071e-07, -2.28446e-07, 3.02586, 3.02585, -1.32264e-07, 3.6071e-07, 1.32264e-07, 3.02585, 2.28446e-07, -0.326242, 1.15011, -0.0383256)
+transform = Transform3D(-3.60669e-07, 1.09535e-05, 3.02586, 3.02585, -1.09535e-05, 3.6071e-07, 1.09535e-05, 3.02585, -1.09536e-05, -0.326242, 1.15011, -0.0383256)
 
 [node name="HorrorMovieCharacter_004_176_L_Hand_2_Predator" parent="." index="2"]
-transform = Transform3D(3.6071e-07, 2.28446e-07, -3.02586, -3.02585, -1.32264e-07, -3.6071e-07, -1.32264e-07, 3.02585, 2.28446e-07, 0.315824, 1.15024, -0.0383256)
+transform = Transform3D(3.60748e-07, -1.09535e-05, -3.02586, -3.02585, -1.09535e-05, -3.6071e-07, -1.09535e-05, 3.02585, -1.09536e-05, 0.315824, 1.15024, -0.0383256)
 
 [node name="HorrorMovieCharacter_004_180_R_Foot_1_Predator" parent="." index="3"]
 transform = Transform3D(3.02586, 0, 0, 0, -1.09535e-05, -3.02585, 0, 3.02585, -1.09535e-05, -0.125352, 0.485632, -0.0785377)
