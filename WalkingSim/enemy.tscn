@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://joklltnh7f7o"]
+[gd_scene load_steps=21 format=3 uid="uid://joklltnh7f7o"]
 
 [ext_resource type="Texture2D" uid="uid://blyo8oxfff8wo" path="res://models/textures/T_HorrorMovieCharacter_Color.png" id="1_2l6bu"]
 [ext_resource type="Script" path="res://enemy.gd" id="1_42asn"]
@@ -402,7 +402,12 @@ _data = {
 "Walking": SubResource("Animation_utu7h")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hdkuq"]
+size = Vector3(1, 1.9296, 0.689355)
+
 [node name="Enemy" type="CharacterBody3D"]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 script = ExtResource("1_42asn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -410,7 +415,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.995182, -0.0916958)
 shape = SubResource("CapsuleShape3D_yrn35")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.995182, -0.0916958)
+transform = Transform3D(0.674715, 0, 0.738079, 0, 1, 0, -0.738079, 0, 0.674715, -0.00601717, 0.995182, -0.0215744)
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="HorrorMovieCharacter_004_173_L_Hand_2_Predator" type="MeshInstance3D" parent="."]
@@ -419,7 +424,7 @@ mesh = SubResource("ArrayMesh_hf7xw")
 skeleton = NodePath("")
 
 [node name="HorrorMovieCharacter_004_174_Head_Predator" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.02586, 0, 0, 0, 0, -3.02586, 0, 3.02586, 0, -0.00545955, 1.75787, -0.0678176)
+transform = Transform3D(-3.02586, -2.64529e-07, 0, 0, 0, -3.02586, 2.64529e-07, -3.02586, 0, -0.00055762, 1.75787, -0.0454526)
 mesh = SubResource("ArrayMesh_347bm")
 skeleton = NodePath("")
 
@@ -439,7 +444,7 @@ mesh = SubResource("ArrayMesh_s66o0")
 skeleton = NodePath("")
 
 [node name="HorrorMovieCharacter_004_184_Spine3_9_Predator" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.02586, 0, 0, 0, 0, -3.02586, 0, 3.02586, 0, 0.00916944, 1.30583, -0.00274344)
+transform = Transform3D(-3.02586, -2.64529e-07, 0, 0, 0, -3.02586, 2.64529e-07, -3.02586, 0, -0.0151866, 1.30583, -0.110527)
 mesh = SubResource("ArrayMesh_yxpyb")
 skeleton = NodePath("")
 
@@ -449,3 +454,11 @@ skeleton = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_jfb4l")
 }
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07234, -0.0802374)
+shape = SubResource("BoxShape3D_hdkuq")
+
+[node name="Marker3D" type="Marker3D" parent="Area3D"]
