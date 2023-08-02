@@ -9,7 +9,7 @@ var movement_speed = 1
 
 func _ready():
 	call_deferred("get_target")
-
+	$AnimationPlayer.play("Walking")
 func get_target():
 	nav_agent.target_position = player.global_transform.origin
 	movement_speed *= 1.1
@@ -27,7 +27,3 @@ func _physics_process(delta):
 	velocity = new_velocity
 	move_and_slide()
 
-func enemy_movement():
-	if enemy_walking == true:
-		enemy_walking = false
-		$AnimationPlayer.play("Walking")

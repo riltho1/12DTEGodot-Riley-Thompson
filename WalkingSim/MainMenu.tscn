@@ -93,7 +93,7 @@ texture = ExtResource("2_tuxc3")
 
 [node name="Sprite2D2" type="Sprite2D" parent="MainMenu/CenterContainer/HBoxContainer"]
 position = Vector2(1284.5, 59)
-scale = Vector2(1.44, 1.07667)
+scale = Vector2(1.44392, 1.0807)
 texture = ExtResource("2_tuxc3")
 
 [node name="Label" type="Label" parent="MainMenu/CenterContainer/HBoxContainer"]
@@ -162,7 +162,7 @@ theme_override_fonts/font = ExtResource("2_xtyvk")
 theme_override_font_sizes/font_size = 26
 text = "SFX"
 
-[node name="SoundSlider" type="HSlider" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer"]
+[node name="HSlider" type="HSlider" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="OptionsMenu/CenterContainer/VBoxContainer"]
