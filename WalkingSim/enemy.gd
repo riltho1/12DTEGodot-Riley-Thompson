@@ -12,7 +12,7 @@ func _ready():
 	$AnimationPlayer.play("Walking")
 func get_target():
 	nav_agent.target_position = player.global_transform.origin
-	movement_speed *= 1.1
+	movement_speed *= 1.05
 	print(movement_speed)
 
 func _physics_process(delta):
@@ -27,3 +27,6 @@ func _physics_process(delta):
 	velocity = new_velocity
 	move_and_slide()
 
+func _on_area_3d_body_entered(body):
+	if body.is_in_group("Player"):
+		get_tree().change_scene_to_file("res://jumpscare.tscn")

@@ -18,7 +18,7 @@ polygons = [PackedInt32Array(1, 3, 2), PackedInt32Array(2, 3, 0), PackedInt32Arr
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_hp5b4")
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_ate4x")]
+[node name="Player" parent="." instance=ExtResource("2_ate4x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.52336, 12.254)
 run_speed = 7
 walk_speed = 3
@@ -27,7 +27,7 @@ walk_speed = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.51306, 2.78199, -4.91796)
 
 [node name="Enemy" parent="." instance=ExtResource("5_5xep7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3496, 7.03512)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.68501, 0.904389, -20.4184)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_q3xc2")
