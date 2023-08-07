@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://by2yyr8pwpj1k"]
+[gd_scene load_steps=12 format=3 uid="uid://by2yyr8pwpj1k"]
 
 [ext_resource type="Texture2D" uid="uid://blyo8oxfff8wo" path="res://models/textures/T_HorrorMovieCharacter_Color.png" id="1_6q1rd"]
+[ext_resource type="Script" path="res://jumpscare.gd" id="1_8atr2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smvub"]
 resource_name = "M_HorrorCharacter"
@@ -132,6 +133,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_sm521")
 
 [node name="Jumpscare" type="Node3D"]
+script = ExtResource("1_8atr2")
 
 [node name="HorrorMovieCharacter_004_173_L_Hand_2_Predator" type="MeshInstance3D" parent="."]
 transform = Transform3D(-3.60669e-07, 1.09535e-05, 3.02586, 3.02585, -1.09535e-05, 3.6071e-07, 1.09535e-05, 3.02585, -1.09536e-05, -0.326242, 0.328498, -0.0383256)
@@ -158,3 +160,9 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0.9
 fov = 12.9753
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
