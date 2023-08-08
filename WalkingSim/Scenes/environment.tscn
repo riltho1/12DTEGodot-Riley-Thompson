@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://b1mtg6l0uh4fe" path="res://environment.blend" id="1_y6cik"]
 [ext_resource type="Texture2D" uid="uid://bbtvfop6fchft" path="res://textures/Photoreal_Grass_06-512x512.png" id="2_b47lc"]
-[ext_resource type="PackedScene" uid="uid://t2tpm3jcmxe7" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_2.tscn" id="7_5bph6"]
-[ext_resource type="PackedScene" uid="uid://cnc1hsunxsa8d" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_3.tscn" id="8_sy3oc"]
-[ext_resource type="PackedScene" uid="uid://bl8erknuddtri" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_4.tscn" id="9_qb5b1"]
-[ext_resource type="PackedScene" uid="uid://dpg3mdg4i4ble" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_6.tscn" id="10_4du33"]
-[ext_resource type="PackedScene" uid="uid://m6k1mgrgr2oc" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_1.tscn" id="11_nc0db"]
-[ext_resource type="PackedScene" uid="uid://brypl8dagik5w" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_5.tscn" id="12_obviv"]
-[ext_resource type="PackedScene" uid="uid://40c0lbst3sgf" path="res://fire.tscn" id="13_qv2dq"]
-[ext_resource type="PackedScene" uid="uid://dsftt2m0m8x70" path="res://models/log_cabin/log_cabin.tscn" id="14_jtfj7"]
+[ext_resource type="PackedScene" uid="uid://t2tpm3jcmxe7" path="res://Scenes/Model scenes/tree_2.tscn" id="7_5bph6"]
+[ext_resource type="PackedScene" uid="uid://cnc1hsunxsa8d" path="res://Scenes/Model scenes/tree_3.tscn" id="8_sy3oc"]
+[ext_resource type="PackedScene" uid="uid://bl8erknuddtri" path="res://Scenes/Model scenes/tree_4.tscn" id="9_qb5b1"]
+[ext_resource type="PackedScene" uid="uid://dpg3mdg4i4ble" path="res://Scenes/Model scenes/tree_6.tscn" id="10_4du33"]
+[ext_resource type="PackedScene" uid="uid://m6k1mgrgr2oc" path="res://Scenes/Model scenes/tree_1.tscn" id="11_nc0db"]
+[ext_resource type="PackedScene" uid="uid://brypl8dagik5w" path="res://Scenes/Model scenes/tree_5.tscn" id="12_obviv"]
+[ext_resource type="PackedScene" uid="uid://40c0lbst3sgf" path="res://Scenes/fire.tscn" id="13_qv2dq"]
+[ext_resource type="PackedScene" uid="uid://dsftt2m0m8x70" path="res://Scenes/log_cabin.tscn" id="14_jtfj7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t6o1r"]
 albedo_texture = ExtResource("2_b47lc")
