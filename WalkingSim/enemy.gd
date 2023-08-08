@@ -5,7 +5,7 @@ var enemy_walking = true
 @onready var nav_agent = $NavigationAgent3D
 @onready var player = get_node("/root/World/Player")
 
-var movement_speed = 1
+var movement_speed = 1.5
 
 func _ready():
 	call_deferred("get_target")
