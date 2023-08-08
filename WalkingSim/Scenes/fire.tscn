@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://40c0lbst3sgf"]
+
+[ext_resource type="Texture2D" uid="uid://buk1foq1qxhvh" path="res://textures/pngwing.com.png" id="1_xldvq"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0s70v"]
+lifetime_randomness = 0.12
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.5
+emission_ring_radius = 0.5
+emission_ring_inner_radius = 0.0
+gravity = Vector3(0, 1, 0)
+scale_min = 0.5
+scale_max = 2.0
+color = Color(1, 1, 1, 0)
+turbulence_enabled = true
+turbulence_noise_strength = 4.55
+turbulence_noise_scale = 5.93
+turbulence_noise_speed_random = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odaa4"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.152941)
+albedo_texture = ExtResource("1_xldvq")
+emission_enabled = true
+emission = Color(0.254902, 0.254902, 0.254902, 1)
+emission_energy_multiplier = 1.5
+emission_texture = ExtResource("1_xldvq")
+rim_enabled = true
+rim = 0.07
+rim_tint = 0.84
+billboard_mode = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gy6ag"]
+material = SubResource("StandardMaterial3D_odaa4")
+orientation = 2
+
+[node name="GPUParticles3D" type="GPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64097, 0)
+amount = 15
+visibility_aabb = AABB(-4, -1.13567, -1.06579, 8, 2.27134, 2.13159)
+trail_lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_0s70v")
+draw_pass_1 = SubResource("PlaneMesh_gy6ag")

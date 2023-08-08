@@ -1,0 +1,303 @@
+[gd_scene load_steps=12 format=3 uid="uid://ctnrxe7l0uxg0"]
+
+[ext_resource type="PackedScene" uid="uid://b1mtg6l0uh4fe" path="res://environment.blend" id="1_y6cik"]
+[ext_resource type="Texture2D" uid="uid://bbtvfop6fchft" path="res://textures/Photoreal_Grass_06-512x512.png" id="2_b47lc"]
+[ext_resource type="PackedScene" uid="uid://t2tpm3jcmxe7" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_2.tscn" id="7_5bph6"]
+[ext_resource type="PackedScene" uid="uid://cnc1hsunxsa8d" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_3.tscn" id="8_sy3oc"]
+[ext_resource type="PackedScene" uid="uid://bl8erknuddtri" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_4.tscn" id="9_qb5b1"]
+[ext_resource type="PackedScene" uid="uid://dpg3mdg4i4ble" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_6.tscn" id="10_4du33"]
+[ext_resource type="PackedScene" uid="uid://m6k1mgrgr2oc" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_1.tscn" id="11_nc0db"]
+[ext_resource type="PackedScene" uid="uid://brypl8dagik5w" path="res://models/free-tree-3d-low-poly-pack/Model scenes/tree_5.tscn" id="12_obviv"]
+[ext_resource type="PackedScene" uid="uid://40c0lbst3sgf" path="res://fire.tscn" id="13_qv2dq"]
+[ext_resource type="PackedScene" uid="uid://dsftt2m0m8x70" path="res://models/log_cabin/log_cabin.tscn" id="14_jtfj7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t6o1r"]
+albedo_texture = ExtResource("2_b47lc")
+uv1_triplanar = true
+
+[node name="environment" instance=ExtResource("1_y6cik")]
+
+[node name="Plane" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_t6o1r")
+
+[node name="Tree_temp_climate_003" parent="." index="1" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.45448, 1.46619, -10.7961)
+
+[node name="Tree_temp_climate_008" parent="." index="2" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6165, 2.60583, -23.2157)
+
+[node name="Tree_temp_climate_009" parent="." index="3" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6482, 1.97815, 40.8179)
+
+[node name="Tree_temp_climate_010" parent="." index="4" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8416, 1.70337, -9.02184)
+
+[node name="Tree_temp_climate_018" parent="." index="5" instance=ExtResource("10_4du33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.712387, 1.09607, -15.3123)
+
+[node name="Tree_temp_climate_004" parent="." index="6" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.09955, 1.09302, -16.1188)
+
+[node name="tree1" parent="." index="7" instance=ExtResource("11_nc0db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.48672, 1.23389, -13.6994)
+
+[node name="Tree_temp_climate_011" parent="." index="8" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70702, 1.02075, -14.8284)
+
+[node name="Tree_temp_climate_019" parent="." index="9" instance=ExtResource("10_4du33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25547, 0.904663, -13.3768)
+
+[node name="Tree_temp_climate_005" parent="." index="10" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.99746, 0.697998, -12.5703)
+
+[node name="Tree_temp_climate_012" parent="." index="11" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3202, 0.655029, -4.66691)
+
+[node name="tree2" parent="." index="12" instance=ExtResource("11_nc0db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7395, 0.368042, -8.69925)
+
+[node name="Tree_temp_climate_013" parent="." index="13" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3202, 0.82373, -2.24751)
+
+[node name="Tree_temp_climate_017" parent="." index="14" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4546, 1.78052, -6.27985)
+
+[node name="Tree_temp_climate_020" parent="." index="15" instance=ExtResource("10_4du33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0998, 1.72107, -3.86044)
+
+[node name="Tree_temp_climate_014" parent="." index="16" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4868, 1.50537, -12.0864)
+
+[node name="Tree_temp_climate_006" parent="." index="17" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.4306, 2.56384, -23.9246)
+
+[node name="tree3" parent="." index="18" instance=ExtResource("11_nc0db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.4613, 1.91614, 42.1748)
+
+[node name="Tree_temp_climate_007" parent="." index="19" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.8134, 2.04407, 16.5924)
+
+[node name="tree4" parent="." index="20" instance=ExtResource("11_nc0db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.4624, 1.14612, -37.7529)
+
+[node name="tree5" parent="." index="21" instance=ExtResource("11_nc0db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.1032, 0.254028, -61.133)
+
+[node name="tree6" parent="." index="22" instance=ExtResource("11_nc0db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0418, 0.289917, -68.3745)
+
+[node name="tree7" parent="." index="23" instance=ExtResource("11_nc0db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1891, 2.03418, 53.1943)
+
+[node name="tree8" parent="." index="24" instance=ExtResource("11_nc0db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3257, 0.5177, 71.4077)
+
+[node name="tree9" parent="." index="25" instance=ExtResource("11_nc0db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.9667, 1.46326, 13.0371)
+
+[node name="tree10" parent="." index="26" instance=ExtResource("11_nc0db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.6553, 0.467896, 4.25959)
+
+[node name="Tree_temp_climate_015" parent="." index="27" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6203, 1.40808, -2.76243)
+
+[node name="Tree_temp_climate_016" parent="." index="28" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5231, 1.41614, 0.309702)
+
+[node name="Tree_temp_climate_021" parent="." index="29" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.987, 3.96204, -3.42075)
+
+[node name="Tree_temp_climate_022" parent="." index="30" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.076, 1.22827, -0.129179)
+
+[node name="Tree_temp_climate_023" parent="." index="31" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9538, 1.48047, 2.28464)
+
+[node name="Tree_temp_climate_024" parent="." index="32" instance=ExtResource("10_4du33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.962, 1.55652, 3.1624)
+
+[node name="Tree_temp_climate_025" parent="." index="33" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1853, 1.60341, 4.36679)
+
+[node name="Tree_temp_climate_026" parent="." index="34" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2372, 1.60032, 4.98418)
+
+[node name="Tree_temp_climate_027" parent="." index="35" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1203, 1.72728, 6.6433)
+
+[node name="Tree_temp_climate_028" parent="." index="36" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9187, 1.58702, 8.24909)
+
+[node name="Tree_temp_climate_029" parent="." index="37" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1848, 0.510742, -44.7547)
+
+[node name="Tree_temp_climate_030" parent="." index="38" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.0204, 0.697021, -43.0508)
+
+[node name="Tree_temp_climate_031" parent="." index="39" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8296, 0.891602, -40.1298)
+
+[node name="Tree_temp_climate_032" parent="." index="40" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.2017, 2.64612, -20.8999)
+
+[node name="Tree_temp_climate_033" parent="." index="41" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.6359, 2.58398, -18.4657)
+
+[node name="Tree_temp_climate_034" parent="." index="42" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.1953, 2.71924, -25.5248)
+
+[node name="Tree_temp_climate_035" parent="." index="43" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.0701, 2.41492, -16.7618)
+
+[node name="Tree_temp_climate_036" parent="." index="44" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.3662, 2.20581, -14.3276)
+
+[node name="Tree_temp_climate_037" parent="." index="45" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.09, 1.4906, 58.9408)
+
+[node name="Tree_temp_climate_038" parent="." index="46" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9256, 2.89111, 47.2568)
+
+[node name="Tree_temp_climate_039" parent="." index="47" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8074, 1.26477, 58.6973)
+
+[node name="Tree_temp_climate_040" parent="." index="48" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9064, 1.46191, 60.1578)
+
+[node name="Tree_temp_climate_041" parent="." index="49" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.89995, 0.791504, 56.9934)
+
+[node name="Tree_temp_climate_042" parent="." index="50" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.6979, 1.4032, 38.4938)
+
+[node name="Tree_temp_climate_043" parent="." index="51" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5862, 1.54517, 43.3621)
+
+[node name="Tree_temp_climate_044" parent="." index="52" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9654, 1.18494, 58.9408)
+
+[node name="Tree_temp_climate_045" parent="." index="53" instance=ExtResource("10_4du33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.9214, 2.11975, -5.0778)
+
+[node name="Tree_temp_climate_046" parent="." index="54" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.9741, 3.11743, -24.0643)
+
+[node name="Tree_temp_climate_047" parent="." index="55" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.7307, 3.21094, -16.0315)
+
+[node name="Tree_temp_climate_048" parent="." index="56" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.0994, 1.52881, -33.8009)
+
+[node name="Tree_temp_climate_049" parent="." index="57" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11703, 0.780029, -36.7219)
+
+[node name="Tree_temp_climate_050" parent="." index="58" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.10646, 0.987793, -29.176)
+
+[node name="Tree_temp_climate_051" parent="." index="59" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1299, 1.86853, -29.176)
+
+[node name="Tree_temp_climate_052" parent="." index="60" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.76828, 0.959595, -30.8799)
+
+[node name="Tree_temp_climate_053" parent="." index="61" instance=ExtResource("10_4du33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2153, 2.53882, -21.8735)
+
+[node name="Tree_temp_climate_054" parent="." index="62" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.777634, 0.925293, -29.176)
+
+[node name="Tree_temp_climate_055" parent="." index="63" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5072, 2.52661, -25.2814)
+
+[node name="Tree_temp_climate_056" parent="." index="64" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.6118, 1.11987, 26.8098)
+
+[node name="Tree_temp_climate_057" parent="." index="65" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.4937, 2.58179, 57.7237)
+
+[node name="Tree_temp_climate_058" parent="." index="66" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2709, 0.651245, 69.8945)
+
+[node name="Tree_temp_climate_059" parent="." index="67" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.4779, 0.0201416, 67.4603)
+
+[node name="Tree_temp_climate_060" parent="." index="68" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.3327, 0.394531, 31.6781)
+
+[node name="Tree_temp_climate_061" parent="." index="69" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.79462, 1.6344, 22.9151)
+
+[node name="Tree_temp_climate_062" parent="." index="70" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.172, 1.88525, 48.7173)
+
+[node name="Tree_temp_climate_063" parent="." index="71" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.1292, 1.7439, -45.2415)
+
+[node name="Tree_temp_climate_064" parent="." index="72" instance=ExtResource("10_4du33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.8658, 1.03223, -32.097)
+
+[node name="Tree_temp_climate_065" parent="." index="73" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.5242, 2.35461, -46.9454)
+
+[node name="Tree_temp_climate_066" parent="." index="74" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.1619, 0.285645, -48.6493)
+
+[node name="Tree_temp_climate_067" parent="." index="75" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.5441, 2.74854, -38.1824)
+
+[node name="Tree_temp_climate_068" parent="." index="76" instance=ExtResource("10_4du33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1761, 0.336548, -56.4387)
+
+[node name="Tree_temp_climate_069" parent="." index="77" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.64597, 1.02673, -58.1426)
+
+[node name="Tree_temp_climate_070" parent="." index="78" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3627, 0.677979, -56.6821)
+
+[node name="Tree_temp_climate_071" parent="." index="79" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7641, 1.26367, -40.6166)
+
+[node name="Tree_temp_climate_072" parent="." index="80" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0275, 1.27612, -34.0444)
+
+[node name="Tree_temp_climate_073" parent="." index="81" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.4275, 0.214844, 2.46811)
+
+[node name="Tree_temp_climate_074" parent="." index="82" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.9606, 1.73413, -9.94613)
+
+[node name="Tree_temp_climate_075" parent="." index="83" instance=ExtResource("10_4du33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.5001, 2.80676, 44.8226)
+
+[node name="Tree_temp_climate_076" parent="." index="84" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0339, 1.24512, 42.145)
+
+[node name="Tree_temp_climate_077" parent="." index="85" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5207, 0.844482, 26.3229)
+
+[node name="Tree_temp_climate_078" parent="." index="86" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.231, 2.05847, 10.2574)
+
+[node name="Tree_temp_climate_079" parent="." index="87" instance=ExtResource("10_4du33")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5136, 1.55664, 1.00761)
+
+[node name="Tree_temp_climate_080" parent="." index="88" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1257, 2.0769, -2.1568)
+
+[node name="Tree_temp_climate_081" parent="." index="89" instance=ExtResource("8_sy3oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.4474, 1.20178, 71.1116)
+
+[node name="Tree_temp_climate_082" parent="." index="90" instance=ExtResource("12_obviv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.5498, -0.487793, 68.6774)
+
+[node name="Tree_temp_climate_083" parent="." index="91" instance=ExtResource("7_5bph6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.6288, 0.0175781, 7.82328)
+
+[node name="Tree_temp_climate_084" parent="." index="92" instance=ExtResource("9_qb5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.8131, 0.898193, -18.7091)
+
+[node name="GPUParticles3D" parent="." index="93" instance=ExtResource("13_qv2dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 15)
+
+[node name="log_cabin" parent="." index="94" instance=ExtResource("14_jtfj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.04222, 3)

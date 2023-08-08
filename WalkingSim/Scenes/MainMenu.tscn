@@ -1,0 +1,217 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0babheowury5"]
+
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_aa6t6"]
+[ext_resource type="Texture2D" uid="uid://ttk74qb7oire" path="res://luke-guinan-tree-assets-forest.jpg" id="2_ev0gd"]
+[ext_resource type="FontFile" uid="uid://bdn3a2mkaixfs" path="res://Squarely.ttf" id="3_v7ek8"]
+
+[sub_resource type="Animation" id="Animation_7tb1a"]
+resource_name = "MainToOptions"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(575, 325), Vector2(1727, 325)]
+}
+
+[sub_resource type="Animation" id="Animation_4p0tv"]
+resource_name = "OptionsToMain"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1727, 325), Vector2(575, 325)]
+}
+
+[sub_resource type="Animation" id="Animation_mbow8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(575, 325)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0qn25"]
+_data = {
+"MainToOptions": SubResource("Animation_7tb1a"),
+"OptionsToMain": SubResource("Animation_4p0tv"),
+"RESET": SubResource("Animation_mbow8")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_aa6t6")
+metadata/_edit_vertical_guides_ = []
+
+[node name="MainMenu" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = -50.5
+offset_right = 99.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="MainMenu"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/CenterContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MainMenu/CenterContainer/HBoxContainer"]
+position = Vector2(132.5, 59)
+scale = Vector2(1.44, 1.07667)
+texture = ExtResource("2_ev0gd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MainMenu/CenterContainer/HBoxContainer"]
+position = Vector2(1284.5, 59)
+scale = Vector2(1.44392, 1.0807)
+texture = ExtResource("2_ev0gd")
+
+[node name="Label" type="Label" parent="MainMenu/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_v7ek8")
+theme_override_font_sizes/font_size = 50
+text = "    DARK
+PATHWAYS"
+
+[node name="CenterContainer" type="CenterContainer" parent="MainMenu/CenterContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/CenterContainer/HBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_v7ek8")
+theme_override_font_sizes/font_size = 26
+text = "START"
+flat = true
+
+[node name="Options" type="Button" parent="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_v7ek8")
+theme_override_font_sizes/font_size = 26
+text = "OPTIONS"
+flat = true
+
+[node name="Quit" type="Button" parent="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_v7ek8")
+theme_override_font_sizes/font_size = 26
+text = "QUIT"
+flat = true
+
+[node name="OptionsMenu" type="MarginContainer" parent="."]
+layout_mode = 1
+offset_left = 1536.0
+offset_top = 248.0
+offset_right = 1859.0
+offset_bottom = 397.0
+
+[node name="CenterContainer" type="CenterContainer" parent="OptionsMenu"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu/CenterContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionsMenu/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_v7ek8")
+theme_override_font_sizes/font_size = 26
+text = "SFX"
+
+[node name="HSlider" type="HSlider" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="OptionsMenu/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_v7ek8")
+theme_override_font_sizes/font_size = 26
+text = "MUSIC"
+
+[node name="HSlider" type="HSlider" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="OptionsMenu/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_v7ek8")
+theme_override_font_sizes/font_size = 26
+text = "FULLSCREEN"
+
+[node name="CheckBox" type="CheckBox" parent="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="OptionsMenu/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_v7ek8")
+theme_override_font_sizes/font_size = 26
+text = "BACK"
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0qn25")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 325)
+
+[connection signal="pressed" from="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Options" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="MainMenu/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="toggled" from="OptionsMenu/CenterContainer/VBoxContainer/HBoxContainer3/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="OptionsMenu/CenterContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
