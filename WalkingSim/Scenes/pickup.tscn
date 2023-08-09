@@ -1,13 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://j1gmu5u00jme"]
+[gd_scene load_steps=4 format=3 uid="uid://j1gmu5u00jme"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_4pfu1"]
+[ext_resource type="PackedScene" uid="uid://d08ptanl0ljkt" path="res://lever_switch.tscn" id="1_2c34q"]
+[ext_resource type="Script" path="res://Scenes/lever_switch.gd" id="1_kn70r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5h60v"]
+size = Vector3(0.764213, 1.15195, 0.279082)
 
 [node name="Pickup" type="Area3D" groups=["Pickup"]]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_4pfu1")
+script = ExtResource("1_kn70r")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0229841, 0, -0.0870568)
 shape = SubResource("BoxShape3D_5h60v")
+
+[node name="Lever Switch" parent="." instance=ExtResource("1_2c34q")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0419326, 0, -0.15576)
+
+[node name="Skeleton3D" parent="Lever Switch/RootNode/Po_Bo" index="0"]
+bones/1/rotation = Quaternion(-0.17171, 2.63436e-17, -3.99903e-18, 0.985148)
+
+[editable path="Lever Switch"]
