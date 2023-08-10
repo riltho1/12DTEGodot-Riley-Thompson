@@ -33,8 +33,9 @@ func check_ray_hit():
 		if collider and collider.has_method("switch_interact"):
 			interaction_notifier.visible = true
 			if Input.is_action_just_pressed("use"):
+				switches_collected += 1
+				collection_tracker.text = "Switches : " + str(switches_collected) + " / 10"
 				collider.switch_interact()
-				collection_tracker.text = "Switches : " + str(switches_collected) + " / 12"
 				
 		elif collider and collider.is_in_group("Door"):
 			interaction_notifier.visible = true

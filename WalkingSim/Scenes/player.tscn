@@ -64,7 +64,7 @@ offset_bottom = 40.0
 
 [node name="CollectionTracker" type="Label" parent="Control/MarginContainer"]
 layout_mode = 2
-text = "Switches 0/12"
+text = "Switches 0 / 10"
 
 [node name="flashLight" parent="." instance=ExtResource("2_oarey")]
 transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0.461, 1.2, -0.439)

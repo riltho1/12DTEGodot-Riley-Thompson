@@ -10,11 +10,14 @@ size = Vector3(0.764213, 1.15195, 0.279082)
 script = ExtResource("1_kn70r")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0229841, 0, -0.0870568)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.0491063, 0, -0.0870568)
 shape = SubResource("BoxShape3D_5h60v")
 
 [node name="Lever Switch" parent="." instance=ExtResource("1_2c34q")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0419326, 0, -0.15576)
+
+[node name="RootNode" parent="Lever Switch" index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Lever Switch/RootNode/Po_Bo" index="0"]
 bones/1/rotation = Quaternion(-0.17171, 2.63436e-17, -3.99903e-18, 0.985148)
