@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7lbxq5o00nsq"]
+
+[ext_resource type="PackedScene" uid="uid://dayg5i2fb7jd" path="res://models/low_poly_dungeon_door.glb" id="1_ebhng"]
+
+[node name="low_poly_dungeon_door" instance=ExtResource("1_ebhng")]
