@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://3fwjgb3y1gt5"]
+
+[ext_resource type="Texture2D" uid="uid://ttk74qb7oire" path="res://luke-guinan-tree-assets-forest.jpg" id="1_iv2fy"]
+[ext_resource type="FontFile" uid="uid://bdn3a2mkaixfs" path="res://Squarely.ttf" id="2_hcbk1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/CenterContainer"]
+position = Vector2(576, 324.5)
+scale = Vector2(1.44, 1.07833)
+texture = ExtResource("1_iv2fy")
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hcbk1")
+theme_override_font_sizes/font_size = 62
+text = "YOU HAVE BEEN KIDNAPPED AND SENT INTO A FOREST 
+BECAUSE YOU HAVE BEEN MEAN AND UNGRATEFUL
+YOUR KIDNAPPER WANTS TO TEACH YOU A LESSON.
+NOW YOU MUST TRY TO ESCAPE."

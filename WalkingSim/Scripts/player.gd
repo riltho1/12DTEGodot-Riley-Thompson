@@ -12,6 +12,7 @@ var switches_collected = 0
 @onready var ray = $Camera3D/RayCast3D
 @onready var interaction_notifier = $Control/InteractionNotifier
 @onready var collection_tracker = $Control/MarginContainer/CollectionTracker
+@onready var exit_door_tracker = $Control/MarginContainer/ExitDoorTracker
 @onready var flashlight_power = $Camera3D/SpotLight3D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -19,6 +20,10 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if switches_collected < 10:
+		exit_door_tracker.visible = false
+	if switches_collected >= 10:
+		exit_door_tracker.visible = true
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
