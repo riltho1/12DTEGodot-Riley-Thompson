@@ -20,10 +20,10 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	if switches_collected < 10:
-		exit_door_tracker.visible = false
 	if switches_collected >= 10:
 		exit_door_tracker.visible = true
+	else:
+		exit_door_tracker.visible = false
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
