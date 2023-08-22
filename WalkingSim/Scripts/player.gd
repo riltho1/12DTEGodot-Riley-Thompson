@@ -5,9 +5,13 @@ var SPEED = 5.0 #modify
 @export var run_speed = 10
 @export var walk_speed = 5
 @export var FRICTION = 0.25
+
 const JUMP_VELOCITY = 4.5
 
 var switches_collected = 0
+
+@export var ammo = 6
+var can_shoot = true
 
 @onready var ray = $Camera3D/RayCast3D
 @onready var interaction_notifier = $Control/InteractionNotifier
@@ -50,7 +54,14 @@ func check_ray_hit():
 	else:
 		interaction_notifier.visible = false
 		
-		
+func shoot():
+	print("shooting")
+	if ammo > 0 and can_shoot:
+		ammo -= 1
+		can_shoot = false
+		$Timer.start()
+		print("Make enemy flee")
+		get_tree().call_group("Enemy","set_state",1)
 		
 func flashlight_enabled():
 	if flashlight_power.light_energy > 5:
@@ -61,6 +72,11 @@ func flashlight_enabled():
 
 func _physics_process(delta):
 	check_ray_hit()
+	
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
+		
+	
 	if Input.is_action_just_pressed("flashlight"):
 		flashlight_enabled()
 		
@@ -88,3 +104,7 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_timer_timeout():
+	pass # Replace with function body.
