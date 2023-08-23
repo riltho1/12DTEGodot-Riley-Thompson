@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://by2yyr8pwpj1k"]
+[gd_scene load_steps=13 format=3 uid="uid://by2yyr8pwpj1k"]
 
 [ext_resource type="Script" path="res://Scripts/jumpscare.gd" id="1_0n5uc"]
 [ext_resource type="Texture2D" uid="uid://blyo8oxfff8wo" path="res://models/textures/T_HorrorMovieCharacter_Color.png" id="2_t1smr"]
+[ext_resource type="Texture2D" uid="uid://bj3qo60hyfmxc" path="res://vine-black-painted-swatch.jpg" id="3_82stx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smvub"]
 resource_name = "M_HorrorCharacter"
@@ -164,5 +165,8 @@ fov = 12.9753
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("3_82stx")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmu2kvc74b2pt"]
+
+[ext_resource type="PackedScene" uid="uid://dcwvjcc761r8c" path="res://source/taser_mesh.fbx" id="1_bpjj8"]
+[ext_resource type="Texture2D" uid="uid://dp8x1hco3hph3" path="res://taser_mesh_taser_MAT_BaseColor_sRGB.png" id="2_84dkl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_240bj"]
+albedo_texture = ExtResource("2_84dkl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b1r67"]
+albedo_texture = ExtResource("2_84dkl")
+
+[node name="taser_mesh" instance=ExtResource("1_bpjj8")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="taser_body" parent="RootNode/taser_mesh" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_240bj")
+
+[node name="taser_trigger" parent="RootNode/taser_mesh" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_b1r67")

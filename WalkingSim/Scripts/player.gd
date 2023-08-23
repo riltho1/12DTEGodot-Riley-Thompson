@@ -107,4 +107,4 @@ func _physics_process(delta):
 
 
 func _on_timer_timeout():
-	pass # Replace with function body.
+	can_shoot = true
