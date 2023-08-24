@@ -1,13 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7lbxq5o00nsq"]
+[gd_scene load_steps=4 format=3 uid="uid://b7lbxq5o00nsq"]
 
 [ext_resource type="PackedScene" uid="uid://dayg5i2fb7jd" path="res://models/low_poly_dungeon_door.glb" id="1_ebhng"]
+[ext_resource type="Script" path="res://Exit Door.gd" id="2_7lj3v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p3ql7"]
 size = Vector3(7.12048, 9.21714, 2.80309)
 
 [node name="low_poly_dungeon_door" instance=ExtResource("1_ebhng")]
+script = ExtResource("2_7lj3v")
 
 [node name="Area3D" type="Area3D" parent="." index="1" groups=["Exit"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.513571)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.123186, 4.22748, -0.236085)

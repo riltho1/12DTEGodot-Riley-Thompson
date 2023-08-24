@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1nph0bj3n8fb"
+path="res://.godot/imported/Jumpscare Sound_S4itk48Id9g.mp3-1c3844f9736cfdef8653a30d44f0481e.mp3str"
+
+[deps]
+
+source_file="res://Jumpscare Sound_S4itk48Id9g.mp3"
+dest_files=["res://.godot/imported/Jumpscare Sound_S4itk48Id9g.mp3-1c3844f9736cfdef8653a30d44f0481e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

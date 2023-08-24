@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://by2yyr8pwpj1k"]
+[gd_scene load_steps=14 format=3 uid="uid://by2yyr8pwpj1k"]
 
 [ext_resource type="Script" path="res://Scripts/jumpscare.gd" id="1_0n5uc"]
 [ext_resource type="Texture2D" uid="uid://blyo8oxfff8wo" path="res://models/textures/T_HorrorMovieCharacter_Color.png" id="2_t1smr"]
 [ext_resource type="Texture2D" uid="uid://bj3qo60hyfmxc" path="res://vine-black-painted-swatch.jpg" id="3_82stx"]
+[ext_resource type="AudioStream" uid="uid://1nph0bj3n8fb" path="res://Jumpscare Sound_S4itk48Id9g.mp3" id="4_ixacd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smvub"]
 resource_name = "M_HorrorCharacter"
@@ -168,5 +169,9 @@ autostart = true
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 texture = ExtResource("3_82stx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ixacd")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
