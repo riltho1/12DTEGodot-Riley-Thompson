@@ -51,10 +51,10 @@ func check_ray_hit():
 				
 		elif collider and collider.is_in_group("Exit"):
 			interaction_notifier.visible = true
-			if Input.is_action_just_pressed("use"):
-				exit_door_tracker = true
-				get_tree().change_scene_to_file("res://win_screen.tscn")
-		
+			if switches_collected >= 1:
+				exit_door_tracker.visible = true
+				if Input.is_action_just_pressed("use"):
+					get_tree().change_scene_to_file("res://win_screen.tscn")
 	else:
 		interaction_notifier.visible = false
 		
@@ -66,7 +66,7 @@ func shoot():
 		$Timer.start()
 		print("Make enemy flee")
 		get_tree().call_group("Enemy","set_state",1)
-		
+
 func flashlight_enabled():
 	if flashlight_power.light_energy > 5:
 		flashlight_power.light_energy = 0
