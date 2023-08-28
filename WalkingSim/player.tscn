@@ -1,16 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://daju8scpvco50"]
+[gd_scene load_steps=5 format=3 uid="uid://daju8scpvco50"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_titeb"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_t7uaw"]
 [ext_resource type="PackedScene" uid="uid://dqd2byysjmktq" path="res://flash_light.tscn" id="2_oarey"]
+[ext_resource type="PackedScene" uid="uid://dmu2kvc74b2pt" path="res://taser_gun.tscn" id="3_g44dp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d5awb"]
 radius = 0.24
 height = 1.8
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
-script = ExtResource("1_titeb")
-run_speed = 8
-walk_speed = 4
+script = ExtResource("1_t7uaw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.939147, 0)
@@ -67,4 +66,7 @@ layout_mode = 2
 text = "Switches 0/12"
 
 [node name="flashLight" parent="." instance=ExtResource("2_oarey")]
-transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0.461, 1.2, -0.439)
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, -0.359973, 1.2, -0.439)
+
+[node name="taser_mesh" parent="." instance=ExtResource("3_g44dp")]
+transform = Transform3D(-10, 0, -8.74228e-07, 0, 10, 0, 8.74228e-07, 0, -10, 0.446318, 1.14665, -0.338471)

@@ -25,6 +25,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	exit_door_tracker.visible = false
+	
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -42,18 +43,14 @@ func check_ray_hit():
 				switches_collected += 1
 				collection_tracker.text = "Switches : " + str(switches_collected) + " / 10"
 				collider.switch_interact()
+				if switches_collected == 10:
+					get_tree().change_scene_to_file("res://Scenes/Win_screen.tscn")
 				
 		elif collider and collider.is_in_group("Door"):
 			interaction_notifier.visible = true
 		if Input.is_action_just_pressed("use"):
 			if collider.is_in_group("Door"):
 				collider.get_parent().get_parent().get_parent().get_parent().interact_door()
-				
-		elif collider and collider.is_in_group("Exit"):
-			interaction_notifier.visible = true
-			if Input.is_action_just_pressed("use"):
-				exit_door_tracker = true
-				get_tree().change_scene_to_file("res://win_screen.tscn")
 		
 	else:
 		interaction_notifier.visible = false
